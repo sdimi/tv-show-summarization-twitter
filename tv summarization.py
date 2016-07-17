@@ -37,14 +37,14 @@ tweets['created_at'] = list(map(lambda tweet: tweet['created_at'], tweets_data))
 tweets.head()
 
 #save dataframe to csv
-tweets.to_csv('teliko.csv')
+tweets.to_csv('parsed.csv')
 
 #transform GMT timezone to Europe Athens
 #creates new timestamp on the left of the dataframe
 tweets['created_at'] = pd.to_datetime(pd.Series(tweets['created_at']))
 tweets.set_index('created_at', drop=False, inplace=True)
 tweets.index = tweets.index.tz_localize('GMT').tz_convert('Europe/Athens')
-tweets.index = tweets.index - DateOffset(hours = 24) #isws auto prepei na ginei 24 hours
+tweets.index = tweets.index - DateOffset(hours = 24)
 tweets.index
 
 
@@ -68,7 +68,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk import FreqDist
 
-#added "greek" file at /nltk_data/corpora/stopwords
+#added "greek" file at ../nltk_data/corpora/stopwords
 
 #Combined the following files:
 #file source #1 https://code.grnet.gr/projects/gss/repository/revisions/d59fbcd2f0cd/entry/solr/conf/stopwords.txt
@@ -140,10 +140,3 @@ doc_topic = model.doc_topic_
 
 for i in range(10):
      print("{} (top topic: {})".format(text[i], doc_topic[i].argmax()))
-
-
-
-
-
-
-
