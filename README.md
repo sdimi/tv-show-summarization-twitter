@@ -1,6 +1,6 @@
 # Latent Dirichlet allocation and timeseries analysis for summarization of live TV shows via Twitter
 ---
-#### Watching TV is usually accompanied with comments about the content. We tend to addresss these comments to nearby people or online friends. In this empirical study we retrieved 30k Twitter status updates during popular TV talk shows. Topic modeling analysis allows us to separate themes and, eventually, summarize long TV broadcasts automatically. 
+#### Watching TV is usually accompanied with comments about the content. We tend to address these comments to nearby people or online friends. In this empirical study we retrieved 30k Twitter status updates during popular TV talk shows. Topic modeling analysis allows us to separate themes and, eventually, summarize long TV broadcasts automatically. 
 
 | Tweets volume change during talkshow *Enikos* (18/4/2016)  | Top LDA topics during talkshow *Anatropi* (12/4/2016) |
 | ------------- | ------------- |
